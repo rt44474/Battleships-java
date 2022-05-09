@@ -7,11 +7,11 @@ public class BattleShips {
     final int heightWidth = 10;
     final int shipsToHit = 13;
     final int[] ships = {5, 4, 4};
-    List<List<Point>> points = new ArrayList<>();
-    int[][] board = new int[heightWidth][heightWidth];
-    int[][] computerBoard = new int[heightWidth][heightWidth];
+    final List<List<Point>> points = new ArrayList<>();
+    final int[][] board = new int[heightWidth][heightWidth];
+    final int[][] computerBoard = new int[heightWidth][heightWidth];
     int shipsHit = 0;
-    Random rand = new Random();
+    final Random rand = new Random();
 
 
     public void placeShips() {
