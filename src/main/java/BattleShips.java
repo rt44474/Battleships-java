@@ -21,7 +21,7 @@ public class BattleShips {
             //placed horizontally or diagonally
             int random = rand.nextInt(2);
             int randomColRow = rand.nextInt(heightWidth);
-            List<Point> newPoints = new ArrayList<>();
+            List<Point> newPoints;
             boolean check = true;
             if (random == 0) {
                 if ((heightWidth - randomColRow) > ships[i]) {
@@ -69,11 +69,9 @@ public class BattleShips {
             points.add(newPoints);
             i++;
         }
-        //displayBoard(computerBoard);
     }
 
     public void checkIfHit(Point p) {
-
         int index = 0;
         //hit
         if (computerBoard[p.x][p.y] == 1) {
@@ -93,17 +91,15 @@ public class BattleShips {
             board[p.x][p.y] = -1;
             System.out.println("Ship missed!");
         }
-
     }
 
     public void checkIfSunk(List<Point> points) {
-
         if (points.size() == 0) {
             System.out.println("Ship sunk!");
+            //displayBoard(board);
         } else {
             System.out.println("Ship hit!");
         }
-
     }
 
     public boolean checkIfExists(int i, int which, int randomColRow) {
@@ -141,9 +137,9 @@ public class BattleShips {
         return newPoints;
     }
 
-
     public boolean isWin() {
         if (shipsHit == shipsToHit) {
+            displayBoard(board);
             System.out.println("All ships are sunk. You won!");
             return true;
         } else {
