@@ -9,7 +9,7 @@
 Hello, this is a simplified version of battleships game.
 
 How to run the project:
-1. Choose directory to clone project.
+1. Choose a directory to clone the project.
 2. Open CMD and paste: git clone https://github.com/rt44474/Battleships-java.git
 3. Go to Battleships-java/src/main/java
 4. Build project: javac Run.java
