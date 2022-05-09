@@ -4,6 +4,8 @@
 - [Tomasz Rafalski] (https://github.com/rt44474)
 
 
+
+
 Hello, this is a simplified version of battleships game.
 
 How to run the project:
