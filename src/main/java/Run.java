@@ -41,12 +41,8 @@ public class Run {
                 Point p = new Point(row - 1, col - 1);
                 battleShips.checkIfHit(p);
             }
-
         }
-
-
     }
-
 
     public static int tryInput(String square) {
         if (square.equalsIgnoreCase("X")) {
@@ -56,8 +52,6 @@ public class Run {
         } else {
             return 1;
         }
-
-
     }
 
     public static void startInfo() {
@@ -79,5 +73,4 @@ public class Run {
         System.out.println();
         System.out.println("If u want to start press Enter key...");
     }
-
 }
