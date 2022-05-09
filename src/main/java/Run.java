@@ -21,12 +21,13 @@ public class Run {
             battleShips.displayBoard(battleShips.board);
             System.out.println("Type your square to shoot: ");
             square = s.nextLine();
+            int tryInput = tryInput(square);
             //check if user want to stop playing
-            if (square.equalsIgnoreCase("X")) {
+            if (tryInput == -1) {
                 break;
             }
             //check if input length is correct
-            else if (square.length() != 2) {
+            else if (tryInput == 0) {
                 System.out.println("Wrong input, try again!");
             }
             //check if the coordinates are good
@@ -37,7 +38,7 @@ public class Run {
                     System.out.println("Wrong input, try again!");
                     continue;
                 }
-                Point p = new Point(row-1, col-1);
+                Point p = new Point(row - 1, col - 1);
                 battleShips.checkIfHit(p);
             }
 
@@ -46,6 +47,18 @@ public class Run {
 
     }
 
+
+    public static int tryInput(String square) {
+        if (square.equalsIgnoreCase("X")) {
+            return -1;
+        } else if (square.length() != 2 && !square.substring(square.length() / 2).equalsIgnoreCase("10")) {
+            return 0;
+        } else {
+            return 1;
+        }
+
+
+    }
 
     public static void startInfo() {
         System.out.println("Hello, this is a simplified version of battleships game.");
@@ -58,7 +71,6 @@ public class Run {
         System.out.println("Additionally after every round computer will display grid with your shots.");
         System.out.println("'0' - You missed shot");
         System.out.println("'X' - You hit shot");
-        System.out.println("'+' - Ship sunk");
         System.out.println("'-' - Square is unknown");
         System.out.println("To shoot type coordinates of the form 'A5' where");
         System.out.println("'A' is the column and '5' is the row.");
@@ -66,6 +78,6 @@ public class Run {
         System.out.println("but if you dont want to play anymore type 'X' to end game.");
         System.out.println();
         System.out.println("If u want to start press Enter key...");
-
     }
+
 }
