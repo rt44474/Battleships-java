@@ -1,5 +1,8 @@
 # Battleships-java
-# Tomasz Rafalski
+
+## Author
+- [Tomasz Rafalski] (https://github.com/rt44474)
+
 
 Hello, this is a simplified version of battleships game.
 
